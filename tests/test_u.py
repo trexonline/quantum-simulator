@@ -1,12 +1,16 @@
-from qiskit import QuantumCircuit
-from qiskit.circuit.library import UGate
-from qiskit.quantum_info import Statevector
 import numpy as np
+<<<<<<< Updated upstream
 
 from sheet_1 import apply_u_on_state
+=======
+from qiskit import QuantumCircuit
+from qiskit.quantum_info import Statevector
+from qiskit.circuit.library import UGate
+from quantum_simulator import apply_u
+>>>>>>> Stashed changes
 
 
-def test_apply_u_on_state_matches_qiskit_evolution():
+def test_apply_u_matches_qiskit_evolution():
 	theta = np.pi / 3
 	phi = np.pi / 8
 	lam = 0
@@ -22,7 +26,7 @@ def test_apply_u_on_state_matches_qiskit_evolution():
 
 	u = UGate(theta, phi, lam).to_matrix()
 	initial_state_converted = np.reshape(initial_state.data, [2] * number_of_qubits)
-	result = apply_u_on_state(initial_state_converted, u, 2)
+	result = apply_u(initial_state_converted, u, 2)
 	result_reshaped = np.reshape(np.asarray(result), (2**number_of_qubits,))
 
 	assert np.allclose(aer_result.data, result_reshaped, atol=1e-12)

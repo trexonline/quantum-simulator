@@ -1,5 +1,9 @@
 from qiskit import QuantumCircuit, transpile
+<<<<<<< Updated upstream
 from sheet_1 import quantum_simulator
+=======
+from quantum_simulator import simulator
+>>>>>>> Stashed changes
 from qiskit.quantum_info import Statevector
 import numpy as np
 from qiskit.circuit.random import random_circuit
@@ -24,7 +28,7 @@ def test_comparision(construction_function):
     qc = transpile(qc, basis_gates=["u", "cx"])
 
     aer_state = Statevector.from_instruction(qc)
-    own_state = quantum_simulator.simulate(qc, None)
+    own_state = simulator.simulate(qc, None)
     idx = np.argmax(np.abs(aer_state))
     global_phase = aer_state.data[idx] / own_state[idx]
     assert np.allclose(aer_state, own_state * global_phase)

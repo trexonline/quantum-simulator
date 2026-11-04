@@ -4,7 +4,11 @@ import matplotlib.pyplot as plt
 from qiskit import transpile
 from qiskit.circuit.random import random_circuit
 from qiskit_aer import AerSimulator
+<<<<<<< Updated upstream:src/sheet_1/runtime.py
 from sheet_1 import quantum_simulator, simulator_numba, simulator_cuda
+=======
+from quantum_simulator import simulator, simulator_numba, simulator_cuda
+>>>>>>> Stashed changes:src/quantum_simulator/runtime.py
 
 
 def construct_random_circuit_for_benchmark():
@@ -41,7 +45,7 @@ _ = simulator_cuda.simulate_cuda(qc, None)
 
 aer_mean, aer_std = benchmark_runtime(lambda: run_aer(qc, aer), repeats=3)
 numba_mean, numba_std = benchmark_runtime(lambda: simulator_numba.simulate_numba(qc, None), repeats=3)
-einsum_mean, einsum_std = benchmark_runtime(lambda: quantum_simulator.simulate(qc, None), repeats=3)
+einsum_mean, einsum_std = benchmark_runtime(lambda: simulator.simulate(qc, None), repeats=3)
 cuda_mean, cuda_std = benchmark_runtime(lambda: simulator_cuda.simulate_cuda(qc, None), repeats=3)
 
 labels = ['Aer', 'Numba', 'Einsum', 'CUDA']

@@ -1,8 +1,13 @@
 from qiskit import QuantumCircuit, transpile
 from qiskit.quantum_info import Statevector
 from qiskit.circuit.random import random_circuit
+<<<<<<< Updated upstream:tests/test_benchmark_numba.py
 from sheet_1 import simulator_numba
 from sheet_1 import quantum_simulator
+=======
+from quantum_simulator import simulator_numba
+from quantum_simulator import simulator
+>>>>>>> Stashed changes:tests/benchmark_numba.py
 from qiskit_aer import AerSimulator
 
 import numpy as np
@@ -74,7 +79,7 @@ def test_numba_simulation(benchmark, circuit):
 def test_einsum_simulation(benchmark, circuit):
     """Benchmark your custom simulator"""
     def run():
-        return quantum_simulator.simulate(circuit, None)
+        return simulator.simulate(circuit, None)
 
     result = benchmark(run)
 

@@ -3,10 +3,14 @@ from qiskit.circuit.library import CXGate, QFTGate
 from qiskit.quantum_info import Statevector
 import numpy as np
 
+<<<<<<< Updated upstream
 from sheet_1 import apply_cx_on_state
+=======
+from quantum_simulator import apply_cx
+>>>>>>> Stashed changes
 
 
-def test_apply_cx_on_state_matches_qiskit_evolution():
+def test_apply_cx_matches_qiskit_evolution():
 	qbit1 = 0
 	qbit2 = 2
 	number_of_qubits = 3
@@ -24,7 +28,7 @@ def test_apply_cx_on_state_matches_qiskit_evolution():
 
 	cx = np.reshape(CXGate().to_matrix(), (2, 2, 2, 2))
 	initial_state_converted = np.reshape(initial_state.data, [2] * number_of_qubits)
-	result = apply_cx_on_state(initial_state_converted, cx, qbit1, qbit2)
+	result = apply_cx(initial_state_converted, cx, qbit1, qbit2)
 	result_reshaped = np.reshape(np.asarray(result), (2**number_of_qubits,))
 
 	assert np.allclose(aer_result.data, result_reshaped, atol=1e-18)

@@ -6,8 +6,8 @@ API Reference
     :toctree: _autosummary/
 
     simulate
-    apply_u_on_state
-    apply_cx_on_state
+    apply_u
+    apply_cx
     simulate_numba
     apply_u_numba
     apply_cx_numba
