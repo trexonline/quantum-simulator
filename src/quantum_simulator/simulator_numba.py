@@ -1,7 +1,7 @@
 from qiskit import QuantumCircuit, transpile
 from qiskit.circuit.library import UGate
-from sheet_1.apply_cx_numba import apply_cx_numba
-from sheet_1.apply_u_numba import apply_u_numba
+from quantum_simulator.gate_operations.apply_cx_numba import apply_cx_numba
+from quantum_simulator.gate_operations.apply_u_numba import apply_u_numba
 import numpy as np
 
 #change apply_cx_on_state to numba version

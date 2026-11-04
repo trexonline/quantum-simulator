@@ -1,11 +1,7 @@
 from qiskit import QuantumCircuit, transpile
 from qiskit.quantum_info import Statevector
 from qiskit.circuit.random import random_circuit
-<<<<<<< Updated upstream:tests/test_benchmark.py
-from sheet_1 import quantum_simulator
-=======
 from quantum_simulator import simulator
->>>>>>> Stashed changes:tests/benchmark.py
 from qiskit_aer import AerSimulator
 
 import numpy as np

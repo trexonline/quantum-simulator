@@ -2,8 +2,8 @@ from qiskit import QuantumCircuit
 from qiskit.circuit.library import UGate
 import numpy as np
 
-from sheet_1.apply_cx_cuda import apply_cx_cuda
-from sheet_1.apply_u_cuda import apply_u_cuda
+from quantum_simulator.gate_operations.apply_cx_cuda import apply_cx_cuda
+from quantum_simulator.gate_operations.apply_u_cuda import apply_u_cuda
 
 
 def simulate_cuda(qc: QuantumCircuit, parameters: dict | None = None) -> np.ndarray:

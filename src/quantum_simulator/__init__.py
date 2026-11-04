@@ -8,7 +8,7 @@ from quantum_simulator.simulator_cuda import simulate_cuda
 from quantum_simulator.gate_operations.apply_cx_cuda import apply_cx_cuda
 from quantum_simulator.gate_operations.apply_u_cuda import apply_u_cuda
 
-# hier komen glaube ich nur die simulate functions hin
+# hier komen glaube ich nur die simulate functions hin (außer man will die gate operations direkt importieren)
 
 __all__ = [
     "apply_cx", 

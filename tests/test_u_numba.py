@@ -3,7 +3,7 @@ from qiskit.circuit.library import UGate
 from qiskit.quantum_info import Statevector
 import numpy as np
 from qiskit.circuit.random import random_circuit
-from sheet_1.apply_u_numba import apply_u_numba
+from quantum_simulator.gate_operations.apply_u_numba import apply_u_numba
 
 def test_apply_u_numba_matches_qiskit_evolution():
 	theta = np.pi / 3

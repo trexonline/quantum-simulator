@@ -3,11 +3,7 @@ from qiskit.circuit.library import CXGate, QFTGate
 from qiskit.quantum_info import Statevector
 import numpy as np
 
-<<<<<<< Updated upstream
-from sheet_1 import apply_cx_on_state
-=======
-from quantum_simulator import apply_cx
->>>>>>> Stashed changes
+from quantum_simulator.gate_operations.apply_cx import apply_cx
 
 
 def test_apply_cx_matches_qiskit_evolution():

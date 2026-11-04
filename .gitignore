@@ -4,3 +4,4 @@ __pycache__/
 uv.lock
 docs/build
 sheet_1/docs/source/_autosummary
+playground

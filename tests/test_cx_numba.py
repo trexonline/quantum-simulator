@@ -2,7 +2,7 @@ from qiskit import QuantumCircuit, transpile
 from qiskit.quantum_info import Statevector
 import numpy as np
 from qiskit.circuit.random import random_circuit
-from sheet_1.apply_cx_numba import apply_cx_numba
+from quantum_simulator.gate_operations.apply_cx_numba  import apply_cx_numba
 
 def test_apply_cx_numba_matches_qiskit_evolution():
 	control = 0

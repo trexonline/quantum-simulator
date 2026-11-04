@@ -1,13 +1,9 @@
 import numpy as np
-<<<<<<< Updated upstream
 
-from sheet_1 import apply_u_on_state
-=======
 from qiskit import QuantumCircuit
 from qiskit.quantum_info import Statevector
 from qiskit.circuit.library import UGate
-from quantum_simulator import apply_u
->>>>>>> Stashed changes
+from quantum_simulator.gate_operations.apply_u  import apply_u
 
 
 def test_apply_u_matches_qiskit_evolution():

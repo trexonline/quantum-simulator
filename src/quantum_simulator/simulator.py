@@ -16,10 +16,10 @@ def simulate(qc: QuantumCircuit, parameters: dict | None = None) -> np.ndarray:
     for instr, qargs, _ in qc.data:
         qubit_indices = [qc.find_bit(q).index for q in qargs]
 
-        if instr.name == 'cx':
+        if instr.name == "cx":
             cx=np.array([[1,0,0,0],[0,1,0,0],[0,0,0,1],[0,0,1,0]])
             psi_converted=apply_cx(psi_converted,cx,qubit_indices[0], qubit_indices[1])
-        elif instr.name == 'u':
+        elif instr.name == "u":
             u=UGate(instr.params[0],instr.params[1],instr.params[2]).to_matrix()
             psi_converted=apply_u(psi_converted,u,qubit_indices[0])
         else:
